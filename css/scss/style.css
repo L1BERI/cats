@@ -1,0 +1,83 @@
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../../content/background-cats.jpg") no-repeat center;
+  background-size: cover;
+  animation: background 20s forwards; }
+@keyframes background {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .wrapper .container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px; }
+  .wrapper .main {
+    position: relative; }
+  .wrapper .cats-slider {
+    padding: 0 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .wrapper .cats-slider .slick-list {
+      padding: 30px; }
+  .wrapper .slide-item {
+    max-width: 350px;
+    margin: 0 30px;
+    padding-bottom: 100px;
+    box-shadow: 0px 10px 20px black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 100px;
+    backdrop-filter: blur(7px); }
+    .wrapper .slide-item h1,
+    .wrapper .slide-item q {
+      text-align: center; }
+    .wrapper .slide-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-bottom: 30px; }
+  .wrapper .cats-slider {
+    display: flex;
+    gap: 10px; }
+
+.arrow-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-top: 50px; }
+  .arrow-box .arrow {
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all .5s; }
+    .arrow-box .arrow path {
+      transition: all .5s; }
+  .arrow-box .arrow:hover {
+    background: #ff7edf;
+    transition: all .3s; }
+    .arrow-box .arrow:hover path {
+      stroke: #fff;
+      transition: all .3s; }
+
+/*# sourceMappingURL=style.css.map */
