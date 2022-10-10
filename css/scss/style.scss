@@ -33,6 +33,12 @@ body {
     max-width: 1310px;
     margin: 0 auto;
     padding: 0 15px;
+    visibility: visible;
+  }
+
+
+  .container-visible {
+    visibility: hidden;
   }
 
   .main {
@@ -57,7 +63,7 @@ body {
 
   .slide-item {
     max-width: 350px;
-    margin:0 30px;
+    margin: 0 30px;
     padding-bottom: 100px;
     box-shadow: 0px 10px 20px rgb(0, 0, 0);
     border-radius: 20px;
@@ -66,7 +72,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 50px;
     backdrop-filter: blur(7px);
 
     h1,
@@ -92,7 +98,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
-  margin-top: 50px;
+  margin-top: 25px;
 
   .arrow {
     margin: 0 15px;
@@ -119,4 +125,87 @@ body {
       transition: all .3s;
     }
   }
+}
+
+
+.text {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(15px, -500px);
+
+  transition: all .5s;
+
+  p {
+    font-size: 55px;
+    color: #fff;
+  }
+}
+
+.text-visible {
+  visibility: visible;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.button {
+  color: #fff;
+  padding: 10px 30px;
+  display: block;
+  background: rgba(231, 35, 199, 0.507);
+  border-radius: 50px;
+  transition: all .3s;
+
+}
+
+.button:hover {
+  color: rgb(231, 35, 199);
+  background: transparent;
+  box-shadow: 0px 0px 10px #333;
+}
+
+.back {
+  margin-top: 30px;
+  animation: button 1s ease-in-out infinite;
+}
+
+.back:hover {
+  animation-play-state: paused;
+}
+
+@keyframes button {
+
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translate(2000px, 400px);
+  }
+}
+
+.play-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all .3s;
+  padding: 10px 10px;
+  border-radius: 20px;
+ 
+}
+
+.play-video:hover{
+  background: rgb(231, 35, 199);
+  color:#fff;
+  
 }

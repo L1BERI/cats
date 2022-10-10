@@ -3,7 +3,8 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     infinite: true,
-    speed: 300,
+    speed: 1000,
+    slidesToScroll: 1,
     dots: false,
     waitForAnimate: false,
     responsive: [{
@@ -22,5 +23,19 @@ $(function () {
     e.preventDefault()
     $('.cats-slider').slick('slickPrev')
   })
+
+
+$('.next').on('click', function(e){
+  e.preventDefault();
+  $('.container').toggleClass('container-visible')
+  $('.text').toggleClass('text-visible')
+  
+})
+$('.back').on('click', function(e){
+  e.preventDefault();
+  $('.container').removeClass('container-visible')
+  $('.text').removeClass('text-visible')
+  
+})
 
 })
